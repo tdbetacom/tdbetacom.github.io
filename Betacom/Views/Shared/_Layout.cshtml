@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="ContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    
+    <link rel="stylesheet" href="@Url.Content("~/Content/bootstrap.min.css")" type="text/css"/>
+    <link rel="stylesheet" href="@Url.Content("~/Content/bootstrap-theme.min.css")" type="text/css"/>
+
+    <script src="@Url.Content("~/Scripts/jquery-2.2.0.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.min.js")" type="text/javascript"></script>
+</head>
+<body>
+<form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </div>
+</form>
+
+<nav class="navbar navbar-default navbar-static-top">
+    <ul class="nav navbar-nav col-lg-11">
+        <li role="presentation"><a>Подшипники</a></li>
+        <li role="presentation"><a>О компании</a></li>
+        <li role="presentation"><a>Контакты</a></li>
+    </ul>
+</nav>
+<div class="container">
+    @RenderBody()
+</div>
+</body>
+</html>
